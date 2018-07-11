@@ -12,6 +12,11 @@
                 max-height:100%;
                 max-width:100%;
             }
+            #linkedin{
+                /**image**/
+                height:50px;
+                width:50px;
+            }
             #b2t-container img{
                 position:fixed;
                 right: 1%;
@@ -225,6 +230,11 @@
             });
             $("#b2t-container img").click(function(){
                 $(this).scrollTop(0);
+            });
+            $("#linkedin").hover(function(){
+                $("#linkedin").attr("src","media/linkedin_wb.png");
+            },function(){
+                $("#linkedin").attr("src","media/linkedin_bw.jpg");
             });
         </script>
     </body>
