@@ -243,10 +243,10 @@
         </script>
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         <script>
-            window.sr = ScrollReveal({duration:2000, reset:true});
+            window.sr = ScrollReveal({duration:2000);
             sr.reveal(".animation-panel");
-            sr.reveal("#me",{reset:false,origin:"left"});
-            sr.reveal("#message",{reset:false,origin:"right"});
+            sr.reveal("#me",{origin:"left"});
+            sr.reveal("#message",{origin:"right"});
         </script>
     </body>
 </html>
