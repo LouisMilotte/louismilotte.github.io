@@ -18,6 +18,20 @@
             #projects .card{
                 height: 174 !important;
             }
+            body{
+                color:#403f45 !important;
+            }
+            .section-header{
+                color:#e6ce1d !important;
+                background-color: #403f45 !important;
+            }
+            #main-nav a{
+                color:#403f45 !important;
+                text-decoration: none;
+            }
+            #main-nav a:hover{
+                border-bottom-color: #fdec00 !important; 
+            }
         </style>
         <title>Louis Milotte</title>
     </head>
@@ -31,7 +45,7 @@
                     <div class="col offset-4">
                         <img src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM' class='img img-responsive rounded-circle'/></div>
                     <div class="col-12">
-                        <nav class="nav" style='margin-left:310px;'>
+                        <nav class="nav" style='margin-left:310px;' id="main-nav">
                             <a href="#about" class="nav-link">About</a>
                             <a href='#projects' class='nav-link'>Projects</a>
                             <a href='#services' class='nav-link'>Services</a>
@@ -42,13 +56,13 @@
             </section>
             <section class='row'>
                 <div class="col-12" id="about">
-                    <h5>About Me</h5>
+                    <h5 class="section-header">About Me</h5>
                     <p class='text-justify'>Hello!, I am Louis an I'm a Full-Stack LAMP Software Engineer. I specialize in E-Commerce applications and support informational websites.</p>
                 </div>
             </section>
             <section class='row'>
                 <div class='col-12' id='projects'>
-                    <h5>Projects</h5>
+                    <h5 class="section-header">Projects</h5>
                     <div class='row'>
                         <div class='col-3 col-xs-6'>
                             <div class="card" style="width: 18rem;">
@@ -87,7 +101,7 @@
             </section>
             <section class='row'>
                 <div class='col-12' id='services'>
-                    <h5>Services</h5>
+                    <h5 class="section-header">Services</h5>
                     <div class='row'>
                         <div class='col-3 col-xs-6'>
                             <div class="card" style="width: 18rem;">
@@ -156,16 +170,18 @@
                     </div>
                 </div>
             </section>
-            <footer class="row">
+            <footer class="row" id="contact">
                 <div class='col'>
-                    <h5>Legal</h5>
+                    <h5 class="section-header">Legal</h5>
                     <p>&copy; Louis Milotte All Rights Reserved</p>
                     <p>Powered By GitHub Pages and Twitter Bootstrap</p>
                 </div>
                 <div class="col">
-                    <nav class='nav'>
+                    <h5  class="section-header">Contact</h5>
+                    <nav class='nav flex-column'>
                         <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link'><img src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
                         <a href="https://github.com/LouisMilotte" class='nav-link'><img src="media/github-mark.png" class="img img-responsive"/></a>
+                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link">louis.milotte@yahoo.com</a>
                     </nav>
                 </div>
             </footer>
@@ -174,7 +190,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            
+
         </script>
     </body>
 </html>
