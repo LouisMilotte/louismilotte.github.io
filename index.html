@@ -29,7 +29,7 @@
                 padding-bottom:1%;
                 padding-left:1%;
             }
-            .card-title a{
+            . a{
                 color:black;
             }
             #main-nav a{
@@ -47,14 +47,30 @@
                 height:auto;
                 width:50px;
             }
-            #main-nav{
-                margin-left:315px;
+            .section-header img{
+                height:auto;
+                width:100%;
             }
-            #me{
-                margin-left:370px;
+            p{
+                font-size: 12pt;
             }
-            #header-line{
-                margin-left:315px;
+            @media screen  and (min-width: 501px) /* Tablet and above */ {
+                #me{
+                    width:15%;
+                    height:auto;
+                }
+            }
+
+            @media screen and (max-width: 500px) /* Mobile */ {
+                #media{
+                    height:auto;
+                    width:25%;
+                }
+                #services img{
+                    height:auto;
+                    width:50% !important;
+                    margin-left: 25%!important;    
+                }
             }
         </style>
         <title>Louis Milotte</title>
@@ -64,132 +80,95 @@
             <header class="row">
             </header>
             <section class="row">
-                <aside class="col">
-                    <h5 id="header-line">Louis Milotte <small>LAMP Full Stack Developer</small></h5>
-                    <div class="col">
-                        <img id="me" src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM' class='img img-responsive rounded-circle'/></div>
-                    <div class="col-12" id="main-nav-container">
-                        <nav class="nav" id="main-nav">
-                            <a href="#about" class="nav-link">About</a>
-                            <a href='#projects' class='nav-link'>Projects</a>
-                            <a href='#services' class='nav-link'>Services</a>
-                            <a href='#contact' class='nav-link'>Contact</a>
-                        </nav>
-                    </div>
+                <aside class="col-12">
+                    <h5 id="header-line" class="lg-offset-4 md-offset-4 sm-offset-4 xs-offset-0">Louis Milotte <small>LAMP Full Stack Developer</small></h5>
                 </aside>
+            </section>
+            <section class="row">
+                <div class="col-12" id="main-nav-container">
+                    <nav class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href='#projects' class='nav-link'>Projects</a>
+                        <a href='#services' class='nav-link'>Services</a>
+                        <a href='#contact' class='nav-link'>Contact</a>
+                    </nav>
+                </div>
             </section>
             <section class='row'>
                 <div class="col-12" id="about">
                     <h5 class="section-header">About Me</h5>
-                    <p class='text-justify'>Hello!, I am Louis an I'm a Full-Stack LAMP Software Engineer. I specialize in E-Commerce applications and support informational websites.</p>
+                    <p class='text-justify'>
+                        <img class='rounded-circle pull-left' id="me" src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM'/>
+                        <span>Hello!, I am Louis an I'm a Full-Stack LAMP Software Engineer. I specialize in E-Commerce applications and support informational websites.</span>
+                    </p>
                 </div>
             </section>
             <section class='row'>
                 <div class='col-12' id='projects'>
                     <h5 class="section-header">Projects</h5>
-                    <div class='row'>
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class='card-title'><a href="http://www.swaintechs.com/">Swains TechSpac</a></h5>
-                                    <p class="card-text">I redesigned a Twitter Bootstrap theme for a cleaner user experience.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class='card-title'>Carmae Office Products</h5>
-                                    <p class="card-text">Web-Master for their E-Commerce platform. I created a easy to use Administration Panel with CodeIgniter and Twitter Bootstrap</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class='card-title'>Prism Developments</h5>
-                                    <p class="card-text">I created a WordPress plugin that took S/FTP transfered images from their security cameras for display to investors.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class='card-title'>Good For You Gaming</h5>
-                                    <p class="card-text">I created an Asset Management System using Twitter Bootstrap and CodeIgniter</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6'>
+                    <h5><a href="http://www.swaintechs.com/">Swains TechSpac</a></h5>
+                    <p>I redesigned a Twitter Bootstrap theme for a cleaner user experience.</p>
+                </div>
+                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6'>
+                    <h5>Carmae Office Products</h5>
+                    <p>Web-Master for their E-Commerce platform. I created a easy to use Administration Panel with CodeIgniter and Twitter Bootstrap</p>
+
+                </div>
+                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6'>
+                    <h5>Prism Developments</h5>
+                    <p>I created a WordPress plugin that took S/FTP transfered images from their security cameras for display to investors.</p>
+                </div>
+                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6'>
+                    <h5>Good For You Gaming</h5>
+                    <p>I created an Asset Management System using Twitter Bootstrap and CodeIgniter</p>
                 </div>
             </section>
             <section class='row'>
                 <div class='col-12' id='services'>
-                    <h5 class="section-header">Services</h5>
+                    <h5 class="section-header" style="width:100%;">Services</h5>
                     <div class='row'>
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class='card-title'><img src='media/PHP_Logo,_text_only.svg.png' class='img img-responsive'/></p>
-                                    <p class="card-text">PHP Data Objects are used to drive database applications.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p><img src='media/PHP_Logo,_text_only.svg.png' class=''/></p>
+                            <p>PHP Data Objects are used to drive database applications.</p>
+
                         </div>  
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title"><img src='media/HTML5_logo_black.svg.png' class='img img-responsive'/></h5>
-                                    <p class="card-text">Utilize the latest in User Interface Design. Go from boring Jane Doe to the talk around the industry.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p class=""><img src='media/HTML5_logo_black.svg.png' class=''/></p>
+                            <p>Utilize the latest in User Interface Design. Go from boring Jane Doe to the talk around the industry.</p>
+
                         </div>  
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class="card-title"><img src='media/css_logo.png' class='img img-responsive'/></p>
-                                    <p class="card-text">Take advantage of one-app multi-device design. Save overhead on development and maintenance, optimize user experience.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p class=""><img src='media/css_logo.png' class=''/></p>
+                            <p>Take advantage of one-app multi-device design. Save overhead on development and maintenance, optimize user experience.</p>
+
                         </div>  
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class='card-title'><img src='media/jquery_logo.png' class='img img-responsive'/></p>
-                                    <p class="card-text">Reach a wider audience and unique interactive designs with jQuery.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p><img src='media/jquery_logo.png' class=''/></p>
+                            <p>Reach a wider audience and unique interactive designs with jQuery.</p>
+
+                        </div>
+                        <div class="col-12"></div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p class=""><img src='media/MySQL-logo.png' class=''/></p>
+                            <p>Your business needs a powerful database behind it. The age tested and industry strong MySQL is that foundation.</p>
+
                         </div>  
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class="card-title"><img src='media/MySQL-logo.png' class='img img-responsive'/></p>
-                                    <p class="card-text">Your business needs a powerful database behind it. The age tested and industry strong MySQL is that foundation.</p>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class="card-title"><img src='media/WordPress-logotype-alternative.png' class='img img-responsive'/></p>
-                                    <p class="card-text">With a large developer community, WordPress has what most companies need. From informational blog-like websites to E-Commerce integration.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p class=""><img src='media/WordPress-logotype-alternative.png' class=''/></p>
+                            <p>With a large developer community, WordPress has what most companies need. From informational blog-like websites to E-Commerce integration.</p>
+
                         </div>   
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class="card-title"><img src='media/codeigniter-logo.png' class='img img-responsive'/></p>
-                                    <p class="card-text">A diverse framework that can deliver application interfaces, CMSs, and E-Commerce websites with high mutability as your business grows.</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p class=""><img src='media/codeigniter-logo.png' class=''/></p>
+                            <p>A diverse framework that can deliver application interfaces, CMSs, and E-Commerce websites with high mutability as your business grows.</p>
+
                         </div>   
-                        <div class='col-3 col-xs-6'>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <p class="card-title"><img src='media/twitter-bootstrap-logo.png' class='img img-responsive'/></p>
-                                    <p class="card-text">With most of your customer base using their Smartphones you need to reach them with designs that appeal. Twitter Bootstrap is a one-design multiple device framework</p>
-                                </div>
-                            </div>
+                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item'>
+                            <p><img src='media/twitter-bootstrap-logo.png' class=''/></p>
+                            <p>With most of your customer base using their Smartphones you need to reach them with designs that appeal. Twitter Bootstrap is a one-design multiple device framework</p>
+
                         </div>
                     </div>
                 </div>
