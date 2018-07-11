@@ -170,7 +170,7 @@
             var largestCard = 0;
             $(".card").each(function(){
                 if($(this).height() > largestCard){
-                    largestCard = $(this).css('height');
+                    largestCard = $(this).height();
                 }
             });
             $(".card").css("height",largestCard);
