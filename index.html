@@ -13,10 +13,10 @@
                 max-width:100%;
             }
             #services .card{
-                height:420 !important;
+                height:420px !important;
             }
             #projects .card{
-                height: 174 !important;
+                height: 174px !important;
             }
             body{
                 color:#403f45 !important;
@@ -24,13 +24,37 @@
             .section-header{
                 color:#e6ce1d !important;
                 background-color: #403f45 !important;
+                margin-top:5%;
+                padding-top:1%;
+                padding-bottom:1%;
+                padding-left:1%;
+            }
+            .card-title a{
+                color:black;
             }
             #main-nav a{
-                color:#403f45 !important;
+                color:#83d0f2 !important;
                 text-decoration: none;
             }
             #main-nav a:hover{
-                border-bottom-color: #fdec00 !important; 
+                color: white !important;
+            }
+            #main-nav-container{
+                background-color:#403f45;
+                margin-bottom:1% !important;
+            }
+            footer img{
+                height:auto;
+                width:50px;
+            }
+            #main-nav{
+                margin-left:315px;
+            }
+            #me{
+                margin-left:370px;
+            }
+            #header-line{
+                margin-left:315px;
             }
         </style>
         <title>Louis Milotte</title>
@@ -41,11 +65,11 @@
             </header>
             <section class="row">
                 <aside class="col">
-                    <h5 class='offset-4'>Louis Milotte <small>LAMP Full Stack Developer</small></h5>
-                    <div class="col offset-4">
-                        <img src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM' class='img img-responsive rounded-circle'/></div>
-                    <div class="col-12">
-                        <nav class="nav" style='margin-left:310px;' id="main-nav">
+                    <h5 id="header-line">Louis Milotte <small>LAMP Full Stack Developer</small></h5>
+                    <div class="col">
+                        <img id="me" src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM' class='img img-responsive rounded-circle'/></div>
+                    <div class="col-12" id="main-nav-container">
+                        <nav class="nav" id="main-nav">
                             <a href="#about" class="nav-link">About</a>
                             <a href='#projects' class='nav-link'>Projects</a>
                             <a href='#services' class='nav-link'>Services</a>
@@ -67,7 +91,7 @@
                         <div class='col-3 col-xs-6'>
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class='card-title'>Swains TechSpac</h5>
+                                    <h5 class='card-title'><a href="http://www.swaintechs.com/">Swains TechSpac</a></h5>
                                     <p class="card-text">I redesigned a Twitter Bootstrap theme for a cleaner user experience.</p>
                                 </div>
                             </div>
@@ -178,10 +202,10 @@
                 </div>
                 <div class="col">
                     <h5  class="section-header">Contact</h5>
-                    <nav class='nav flex-column'>
+                    <nav class='nav'>
                         <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link'><img src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
                         <a href="https://github.com/LouisMilotte" class='nav-link'><img src="media/github-mark.png" class="img img-responsive"/></a>
-                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link">louis.milotte@yahoo.com</a>
+                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link"><img src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
                     </nav>
                 </div>
             </footer>
