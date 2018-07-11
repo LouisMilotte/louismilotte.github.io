@@ -12,6 +12,14 @@
                 max-height:100%;
                 max-width:100%;
             }
+            #b2t-container img{
+                position:fixed;
+                right: 1%;
+                top:50%;
+                height:auto;
+                width:100px;
+                display:none;
+            }
             #services .card{
                 height:420px !important;
             }
@@ -172,6 +180,9 @@
                         </div>
                     </div>
                 </div>
+                <div id='b2t-container'>
+                    <a href='#'><img alt='Scroll to top button' src='media/top-button.png'/></a>
+                </div>
             </section>
             <footer class="row" id="contact">
                 <div class='col'>
@@ -183,9 +194,9 @@
                 <div class="col">
                     <h3  class="section-header">Contact</h3>
                     <nav class='nav'>
-                        <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link'><img alt='black and white linkedin logo' src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
-                        <a href="https://github.com/LouisMilotte" class='nav-link'><img alt='black and white github logo' src="media/github-mark.png" class="img img-responsive"/></a>
-                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link"><img alt='black and white envolope' src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
+                        <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link'><img id='linkedin' alt='black and white linkedin logo' src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
+                        <a href="https://github.com/LouisMilotte" class='nav-link'><img id='github' alt='black and white github logo' src="media/github-solid.png" class="img img-responsive"/></a>
+                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link"><img id='mailto' alt='black and white envolope' src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
                     </nav>
                 </div>
             </footer>
@@ -194,7 +205,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-
+            $("#mailto").hover(function(){
+                $("#mailto").attr("src","media/open-envelope_318-28018.jpg");
+            },function(){
+                $("#mailto").attr("src","media/black-envelope-icon-on-white-background-vector-13695153.jpg");
+            });
+            
+            $("#github").hover(function(){
+                $("#github").attr("src","media/github-eyes.png");
+            },function(){
+                $("#github").attr("src","media/github-solid.png");
+            });
+            $(document).scroll(function(){
+                if($(document).scrollTop() > 0){
+                    $("#b2t-container img").css("display","block");
+                }else{
+                    $("#b2t-container img").css("display","none");
+                }
+            });
+            $("#b2t-container img").click(function(){
+                $(this).scrollTop(0);
+            });
         </script>
     </body>
 </html>
