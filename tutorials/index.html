@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            img {
+                max-height:100%;
+                max-width:100%;
+            }
+            #linkedin{
+                /**image**/
+                height:50px;
+                width:50px;
+            }
+            #b2t-container img{
+                position:fixed;
+                right: 1%;
+                top:50%;
+                height:auto;
+                width:100px;
+                display:none;
+                z-index:999;
+            }
+            #services .card{
+                height:420px !important;
+            }
+            #projects .card{
+                height: 174px !important;
+            }
+            body{
+                color:#403f45 !important;
+            }
+            .section-header{
+                color:#e6ce1d !important;
+                background-color: #3B3A40 !important;
+                margin-top:5%;
+                padding-top:1%;
+                padding-bottom:1%;
+                padding-left:1%;
+            }
+            #projects a{
+                color:black;
+            }
+            #main-nav a{
+                color:#e6ce1d !important;
+                text-decoration: none;
+            }
+            #main-nav a:hover{
+                color: white !important;
+            }
+            #main-nav-container{
+                background-color:#3B3A40;
+                margin-bottom:1% !important;
+            }
+            footer img{
+                height:auto;
+                width:50px;
+            }
+            .section-header img{
+                height:auto;
+                width:100%;
+            }
+            p{
+                font-size: 12pt;
+            }
+            @media screen  and (min-width: 501px) /* Tablet and above */ {
+                #me{
+                    width:15%;
+                    height:auto;
+                }
+            }
+
+            @media screen and (max-width: 500px) /* Mobile */ {
+                #media{
+                    height:auto;
+                    width:25%;
+                }
+                #services img{
+                    height:auto;
+                    width:50% !important;
+                    margin-left: 25%!important;    
+                }
+            }
+            #message{
+                font-size: 11pt;
+            }
+        </style>
+        <title>Louis Milotte</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="row">
+            </header>
+            <section class="row">
+                <aside class="col-12">
+                    <h1 id="header-line" class="lg-offset-4 md-offset-4 sm-offset-4 xs-offset-0">Louis Milotte <small>LAMP Full Stack Consultant</small></h1>
+                </aside>
+            </section>
+            <section class="row">
+                <div class="col-12" id="main-nav-container">
+                    <nav class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href='#projects' class='nav-link'>Projects</a>
+                        <a href='#services' class='nav-link'>Services</a>
+                        <a href='#contact' class='nav-link'>Contact</a>
+                    </nav>
+                </div>
+            </section>
+            <section class="row">
+                <h2>Tutorials</h2>
+                <p>Please select a tutorial below to begin.</p>
+            </section>
+            <section class='row'>
+                <div class='col-6 text-center'>
+                    <h2>PHP</h2>
+                    <nav class="nav flex-column">
+                        <a href="php/index.html">Introduction</a>
+                    </nav>
+                </div>
+                <div class="col-6 text-center">
+                    <h2>jQuery</h2>
+                    <p class="text-warning">Coming Soon</p>
+                </div>
+            </section>
+                <div id='b2t-container'>
+                    <a href='#'><img alt='Scroll to top button' src='media/top-button.png'/></a>
+                </div>
+            <footer class="row" id="contact">
+                <div class='col'>
+                    <h3 class="section-header">Legal</h3>
+                    <p>&copy; Louis Milotte All Rights Reserved</p>
+                    <p>Powered By GitHub Pages and Twitter Bootstrap</p>
+                    <p>WCAG2AAA Compliant - Tested With Pa11y</p>
+                </div>
+                <div class="col">
+                    <h3  class="section-header">Contact</h3>
+                    <nav class='nav'>
+                        <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link'><img id='linkedin' alt='black and white linkedin logo' src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
+                        <a href="https://github.com/LouisMilotte" class='nav-link'><img id='github' alt='black and white github logo' src="media/github-solid.png" class="img img-responsive"/></a>
+                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link"><img id='mailto' alt='black and white envolope' src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
+                        <a class='nav-link' href='https://docs.google.com/forms/d/e/1FAIpQLSfvkwdkK3QgRoZHnLnf-vOwpTGC1E3Ex80SK1xwQ4wh2aq4pg/viewform'><img alt='request contact form' src='media/form.png'/></a>
+                    </nav>
+                </div>
+            </footer>
+        </article>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
