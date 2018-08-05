@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: css/*
+Disallow: js/*
+Disallow: media/*
+Disallow: .gitignore
+Disallow: LICENSE
+Disallow: README.md
+Allow: https://louismilotte.github.io/index.html
+Allow: https://louismilotte.github.io/robots.txt
+Allow: https://louismilotte.github.io/sitemap.xml
+Sitemap: https://louismilotte.github.io/sitemap.xml
