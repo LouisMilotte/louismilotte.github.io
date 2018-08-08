@@ -20,6 +20,7 @@
         <meta name="twitter:image" content="https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM" />
         <meta name="og:description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee.">
         <!-- Bootstrap CSS -->
+        <link href="/css/prism.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <style>
             img {
@@ -118,111 +119,33 @@
             <section class="row">
                 <div class="col-12" id="main-nav-container">
                     <nav class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
-                        <a href="#about" class="nav-link" title="About Me">About</a>
-                        <a href='#projects' class='nav-link' title="My Recent Projects">Projects</a>
-                        <a href='#services' class='nav-link' title="My Services">Services</a>
-                        <a href='#contact' class='nav-link' title="Means of Contact">Contact</a>
-                        <a href="/themes/index.html" title="Sample Themes"></a>
+                        <a href="https://louismilotte.github.io/index.html#about" class="nav-link" title="About Me">About</a>
+                        <a href='https://louismilotte.github.io/index.html#projects' class='nav-link' title="My Recent Projects">Projects</a>
+                        <a href='https://louismilotte.github.io/index.html#services' class='nav-link' title="My Services">Services</a>
+                        <a href='https://louismilotte.github.io/index.html#contact' class='nav-link' title="Means of Contact">Contact</a>
+                        <a href="https://louismilotte.github.io/tutorials/fizzbuzz/index.html" title="Fizzbuzz examples">Fizzbuzz</a>
                     </nav>
                 </div>
             </section>
             <section class='row'>
-                <div class="col-12" id="about">
-                    <h2 class="section-header">About Me</h2>
-                    <p class='text-justify'>
-                        <img alt="A black and white image of the developer's face" class='rounded-circle pull-left' id="me" src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM'/>
-                        <span id='message' class='text-justify'>Hello!, I am Louis Milotte  a Full-Stack LAMP Software Consultant. I specialize in E-Commerce applications and support informational websites.</span>
-                    </p>
+                <div class="col-12">
+                    <h2 class="section-header">Fizzbuzz - PHP</h2>
+                    <pre>
+                        <code class="language-php">
+                            for($i=0;$i<100;$i++){
+                                if($i % 3 == 0 || $i % 5 == 0){
+                                    echo "Buzz";
+                                }else{
+                                    echo "Fizz";
+                                }
+                            }
+                        </code>
+                    </pre>
                 </div>
             </section>
-            <section class='row' id='projects'>
-                <div class='col-12'>
-                    <h2 class="section-header">Projects</h2>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3><a href="http://www.swaintechs.com/" title="Swains TechSpac">Swains TechSpac</a></h3>
-                    <p>I created a cleaner user experience with Twitter Bootstrap.</p>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Carmae Office Products</h3>
-                    <p>Web-Master for their E-Commerce platform. I created a easy to use Administration Panel with CodeIgniter and Twitter Bootstrap</p>
-
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Prism Developments</h3>
-                    <p>I created a WordPress plugin that took S/FTP transfered images from their security cameras for display to investors.</p>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Good For You Gaming</h3>
-                    <p>I created an Asset Management System using Twitter Bootstrap and CodeIgniter</p>
-                </div>
-            </section>
-            <section class='row'>
-                <div class='col-12' id='services'>
-                    <h2 class="section-header" style="width:100%;">Services</h2>
-                    <div class='row'>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='black and white PHP logo' src='media/PHP_Logo,_text_only.png' details='php'/></p>
-                            <p>PHP Data Objects are used to drive database applications.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white HTML5 logo' src='media/HTML5_logo_black.png' details='html5'/></p>
-                            <p>Utilize the latest in User Interface Design. Go from boring Jane Doe to the talk around the industry.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white CSS logo' src='media/css_logo.png' details='css'/></p>
-                            <p>Take advantage of one-app multi-device design. Save overhead on development and maintenance, optimize user experience.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='black and white jQuery logo' src='media/jquery_logo.png' details='jquery'/></p>
-                            <p>Reach a wider audience and unique interactive designs with jQuery.</p>
-
-                        </div>
-                        <div class="col-12"></div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white MySQL logo' src='media/MySQL-logo.png' details='mysql'/></p>
-                            <p>Your business needs a powerful database behind it. The age tested and industry strong MySQL is that foundation.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white WordPress logo' src='media/WordPress-logotype-alternative.png' details='wordpress'/></p>
-                            <p>With a large developer community, WordPress has what most companies need. From informational blog-like websites to E-Commerce integration.</p>
-
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='codeingiter black and white logo' src='media/codeigniter-logo.png' details='codeigniter'/></p>
-                            <p>A diverse framework that can deliver application interfaces, CMSs, and E-Commerce websites with high mutability as your business grows.</p>
-
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='twitter bootstrap black and white logo' src='media/twitter-bootstrap-logo.png' details='bootstrap'/></p>
-                            <p>With most of your customer base using their Smartphones you need to reach them with designs that appeal. Twitter Bootstrap is a one-design multiple device framework</p>
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='laravel black and white logo' src='media/laravel_bw.png' details='laravel'/></p>
-                            <p>Laravel makes for rapid and elegant application development without dependence on a specific DBMS, with revolutionary platform design.</p>
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='angular black and white logo' src='media/angular_solidBlack.png' details='angular'/></p>
-                            <p>Angular is a progressive cross-platform framework with high-speeds in development and performance with universal application.</p>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='bulma black and white logo' src='media/bulma.png' details='bulma'/></p>
-                            <p>Bulma is a light-weight JS-less responsive framework.</p>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='nodejs black and white logo' src='media/nodejs.png' details='nodejs'/></p>
-                            <p>Is an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection the callback is fired, but if there is no work to be done, Node will sleep.</p>
-                        </div>
-                    </div>
-                </div>
-                <div id='b2t-container'>
-                    <a href='#'><img alt='Scroll to top button' src='media/top-button.png'/></a>
-                </div>
-            </section>
+            <div id='b2t-container'>
+                <a href='#'><img alt='Scroll to top button' src='media/top-button.png'/></a>
+            </div>
             <footer class="row" id="contact">
                 <div class='col'>
                     <h3 class="section-header">Legal</h3>
@@ -346,5 +269,6 @@
             sr.reveal("#me", {origin: "left"});
             sr.reveal("#message", {origin: "right"});
         </script>
+        <script src="/js/prism.js"></script>
     </body>
 </html>
