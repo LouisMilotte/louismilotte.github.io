@@ -12,7 +12,7 @@ $("form").keypress(function (e) {
 });
 
 $("#run-calculation").click(function () {
-    var gravity = praseFloat($("#gravity").val());
+    var gravity = parseFloat($("#gravity").val());
     var mass = parseFloat($("#ship_mass").val());
     var thrust = parseFloat($("#thrust").val());
     var accel = thrust / mass;
