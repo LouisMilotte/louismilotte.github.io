@@ -33,22 +33,16 @@ and open the template in the editor.
         <div class="container-fluid">
             <header class="row">
                 <h1 class="text-center">Space Engineer Tools</h1>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <div class="col-12" id="main-nav-container">
+                    <nav class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
+                        <a href="https://louismilotte.github.io/index.html#about" class="nav-link" title="About Me">About</a>
+                        <a href='https://louismilotte.github.io/index.html#projects' class='nav-link' title="My Recent Projects">Projects</a>
+                        <a href='https://louismilotte.github.io/index.html#services' class='nav-link' title="My Services">Services</a>
+                        <a href='https://louismilotte.github.io/index.html#contact' class='nav-link' title="Means of Contact">Contact</a>
+                        <a href="/themes/index.html" class="nav-link" title="Sample Themes">Sample Themes</a>
+                        <a href="/space_engineers/index.html" class="nav-link" title="Space Engineers Tools">Space Engineers Tools</a>
+                    </nav>
+                </div>
             </header>
             <section class="row" id="thrust-calculator">
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12 offset-sm-4 offset-md-4 offset-lg-4">
@@ -58,60 +52,12 @@ and open the template in the editor.
                             <input type="number" id="ship_mass" class="form-control" min="0">
                         </div>
                         <div class="form-group">
-                            <label class="sr-only">Ship Grid Type</label>
-                            <select class="form-control" id="ship-grid">
-                                <option value="large">Large</option>
-                                <option value="small">Small</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only">Environment Type</label>
-                            <select class="form-control" id="environment-type">
-                                <option value="earth">Earth-Like</option>
-                                <option value="moon">Moon</option>
-                                <option value="mars">Mars</option>
-                                <option value="alien">Alien</option>
-                                <option value="space">Space</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label class="sr-only">Gravity</label>
-                            <input type="number" id="gravity" step="0.1" class="form-control" min="0">
+                            <input type="number" id="gravity" step="0.1" class="form-control" min="0" value="9.80665">
                         </div>
                         <div class="form-group" id="ship-thruster-container">
-                            <label class="sr-only">Ship Thrusters</label>
-                            <table id="ship-thruster-table">
-                                <tr>
-                                    <th>Thruster Type</th>
-                                    <th>Thruster Force Direction</th>
-                                </tr>
-                                <tr nodelete>
-                                    <td>
-                                        <select class="form-control" role="thruster_type">
-                                            <option value="hydrogen_large">Hydrogen, Large</option>
-                                            <option value="hydrogen_small">Hydrogen, Small</option>
-                                            <option value="atmospheric_large">Atmospheric, Large</option>
-                                            <option value="atmospheric_large">Atmospheric, Small</option>
-                                            <option value="ionic_large">Ionic, Large</option>
-                                            <option value="ionic_small">Ionic, Small</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select class="form-control" role="thruster_direction">
-                                            <option value="dorsal">Dorsal</option>
-                                            <option value="ventral">Ventral</option>
-                                            <option value="fore">Fore</option>
-                                            <option value="aft">Aft</option>
-                                            <option value="port">Port/option>
-                                            <option value="starboard">Starboard</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" class="btn btn-success" id="add-thruster">Add New Thruster</button>
-                            <button type="button" class="btn btn-danger" id="remove-thruster">Remove Last Thruster</button>
+                            <label class="sr-only">Ship Thrust</label>
+                            <input type="number" id="thrust" step="0.1" class="form-control" min="0">
                         </div>
                         <div class="form-group">
                             <button type="button" class="btn btn-success" id="run-calculation">Calculate</button>

@@ -12,47 +12,13 @@ $("form").keypress(function (e) {
 });
 
 $("#run-calculation").click(function () {
-    const largeGridHydrogenLarge = 6000000;
-    const largeGridHydrogenSmall = 900000;
-    const largeGridAtmosphericLarge = 5400000;
-    const largeGridAtmosphericSmall = 420000;
-    const largeGridIonicLarge = 3600000;
-    const largeGridIonicSmall = 288000;
-    
-    const smallGridHydrogenLarge = 6000000;
-    const smallGridHydrogenSmall = 900000;
-    const smallGridAtmosphericLarge = 5400000;
-    const smallGridAtmosphericSmall = 420000;
-    const smallGridIonicLarge = 3600000;
-    const smallGridIonicSmall = 288000;
-    
-    var dorsalThrust = 0;
-    var ventralThrust = 0;
-    var portThrust = 0;
-    var starboardThrust = 0;
-    var foreThrust = 0;
-    var aftThrust = 0;
-    
-    var thrusters = [];
-    $("[role='thruster_type]").each(function(i,value){
-        if(!thrusters.hasOwnProperty($(this).val())){
-            thrusters.push({
-                type:$(this).val(),
-                count:1
-            });
-        }else{
-            thrusters[$(this).val()].count +=1;
-        }
-    });
-    if($("#ship-grid").val() == "large"){
+    var gravity = praseFloat($("#gravity").val());
+    var mass = parseFloat($("#ship_mass").val());
+    var thrust = parseFloat($("#thrust").val());
+    var accel = thrust / mass;
+    if((accel - gravity) < 0){
+        alert("Flight not possible");
     }else{
-        
+        alert("Flight possible, your acceleration is "+(accel-gravity)+" m/s/s");
     }
-});
-
-$("#add-thruster").click(function () {
-
-});
-$("#remove-thruster").click(function () {
-
 });
