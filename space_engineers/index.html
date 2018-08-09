@@ -27,7 +27,89 @@ and open the template in the editor.
         <!-- Bootstrap CSS -->
         <link href="/css/prism.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <title>Space Engineer Tools</title>
+        <title>Space Engineer Tools</title><style>
+            img {
+                max-height:100%;
+                max-width:100%;
+            }
+            #linkedin{
+                /**image**/
+                height:50px;
+                width:50px;
+            }
+            #b2t-container img{
+                position:fixed;
+                right: 1%;
+                top:50%;
+                height:auto;
+                width:100px;
+                display:none;
+                z-index:999;
+            }
+            #services .card{
+                height:420px !important;
+            }
+            #projects .card{
+                height: 174px !important;
+            }
+            body{
+                color:#403f45 !important;
+            }
+            .section-header{
+                color:#e6ce1d !important;
+                background-color: #3B3A40 !important;
+                margin-top:5%;
+                padding-top:1%;
+                padding-bottom:1%;
+                padding-left:1%;
+            }
+            #projects a{
+                color:black;
+            }
+            #main-nav a{
+                color:#e6ce1d !important;
+                text-decoration: none;
+            }
+            #main-nav a:hover{
+                color: white !important;
+            }
+            #main-nav-container{
+                background-color:#3B3A40;
+                margin-bottom:1% !important;
+            }
+            footer img{
+                height:auto;
+                width:50px;
+            }
+            .section-header img{
+                height:auto;
+                width:100%;
+            }
+            p{
+                font-size: 12pt;
+            }
+            @media screen  and (min-width: 501px) /* Tablet and above */ {
+                #me{
+                    width:15%;
+                    height:auto;
+                }
+            }
+
+            @media screen and (max-width: 500px) /* Mobile */ {
+                #media{
+                    height:auto;
+                    width:25%;
+                }
+                #services img{
+                    height:auto;
+                    width:50% !important;
+                    margin-left: 25%!important;    
+                }
+            }
+            #message{
+                font-size: 11pt;
+            }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
