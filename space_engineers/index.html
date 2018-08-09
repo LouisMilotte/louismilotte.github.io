@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee.">
+        <meta name="author" content="Louis Milotte">
+        <meta http-equiv="Cache-control" content="public">
+        <meta name="keywords" content="php,javascript,jquery,lamp,css,html,html5,css3,laravel,bootstrap,twitter,twitter bootstrap,responsive,design, responsive design, bulma, pdo, mysql, mysqli, object, oriented, programming, oop, mvc,model,view,controller,contractor,independent,hire,richmond,virginia,usa,va,united states,united states of america,america,american">
+        <meta property="og:title" content="Louis Milotte LAMP Software Consultant">
+        <meta property="og:image" content="media/PHP_Logo,_text_ony.png">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Louis Milotte Softare Consultant">
+        <meta property="og:url" content="https://louismilotte.github.io">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="https://louismilotte.github.io" />
+        <meta name="twitter:title" content="SLouis Milotte LAMP Software Consultant" />
+        <meta name="twitter:description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee." />
+        <meta name="twitter:image" content="https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM" />
+        <meta name="og:description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee.">
+        <!-- Bootstrap CSS -->
+        <link href="/css/prism.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Space Engineer Tools</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="row">
+                <h1 class="text-center">Space Engineer Tools</h1>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <section class="row" id="thrust-calculator">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12 offset-sm-4 offset-md-4 offset-lg-4">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="sr-only">Ship Mass in Kilograms</label>
+                            <input type="number" id="ship_mass" class="form-control" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Ship Grid Type</label>
+                            <select class="form-control" id="ship-grid">
+                                <option value="large">Large</option>
+                                <option value="small">Small</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Environment Type</label>
+                            <select class="form-control" id="environment-type">
+                                <option value="earth">Earth-Like</option>
+                                <option value="moon">Moon</option>
+                                <option value="mars">Mars</option>
+                                <option value="alien">Alien</option>
+                                <option value="space">Space</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Gravity</label>
+                            <input type="number" id="gravity" step="0.1" class="form-control" min="0">
+                        </div>
+                        <div class="form-group" id="ship-thruster-container">
+                            <label class="sr-only">Ship Thrusters</label>
+                            <table id="ship-thruster-table">
+                                <tr>
+                                    <th>Thruster Type</th>
+                                    <th>Thruster Force Direction</th>
+                                </tr>
+                                <tr nodelete>
+                                    <td>
+                                        <select class="form-control" role="thruster_type">
+                                            <option value="hydrogen_large">Hydrogen, Large</option>
+                                            <option value="hydrogen_small">Hydrogen, Small</option>
+                                            <option value="atmospheric_large">Atmospheric, Large</option>
+                                            <option value="atmospheric_large">Atmospheric, Small</option>
+                                            <option value="ionic_large">Ionic, Large</option>
+                                            <option value="ionic_small">Ionic, Small</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" role="thruster_direction">
+                                            <option value="dorsal">Dorsal</option>
+                                            <option value="ventral">Ventral</option>
+                                            <option value="fore">Fore</option>
+                                            <option value="aft">Aft</option>
+                                            <option value="port">Port/option>
+                                            <option value="starboard">Starboard</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success" id="add-thruster">Add New Thruster</button>
+                            <button type="button" class="btn btn-danger" id="remove-thruster">Remove Last Thruster</button>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success" id="run-calculation">Calculate</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <footer class="row" id="contact">
+                <div class='col'>
+                    <h3 class="section-header">Legal</h3>
+                    <p>&copy; Louis Milotte All Rights Reserved</p>
+                    <p>Powered By GitHub Pages and Twitter Bootstrap</p>
+                    <p>WCAG2AAA Compliant - Tested With Pa11y</p>
+                    <p>Images are properties of their artists. Descriptions are either quoted from or derived from their respected websites.</p>
+                </div>
+                <div class="col">
+                    <h3  class="section-header">Contact</h3>
+                    <nav class='nav'>
+                        <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link' title="My LinkedIn Page"><img id='linkedin' alt='black and white linkedin logo' src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
+                        <a href="https://github.com/LouisMilotte" class='nav-link' title="My GitHub Page"><img id='github' alt='black and white github logo' src="media/github-solid.png" class="img img-responsive"/></a>
+                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link" title="My E-Mail Address"><img id='mailto' alt='black and white envolope' src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
+                        <a class='nav-link' href='https://docs.google.com/forms/d/e/1FAIpQLSfvkwdkK3QgRoZHnLnf-vOwpTGC1E3Ex80SK1xwQ4wh2aq4pg/viewform' title="Contact Request Form"><img alt='request contact form' src='media/form.png'/></a>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://louismilotte.github.io/js/se/thrustCalc.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>
