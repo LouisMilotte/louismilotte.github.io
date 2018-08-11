@@ -25,7 +25,7 @@ $("#run-calculation").click(function () {
         //alert("Flight possible, your acceleration is "+(accel-gravity)+" m/s/s");
         var seconds = 0;
         var position = 0;
-        while(positon < 41000){
+        while(position < 41000){
             position+=netAccel;
             seconds++;
         }
