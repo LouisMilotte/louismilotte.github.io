@@ -104,38 +104,101 @@
             </section>
             <section class="row">
                 <div class="col-12" id="main-nav-container">
-                    <nav class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
-                        <a href="#about" class="nav-link">About</a>
-                        <a href='#projects' class='nav-link'>Projects</a>
-                        <a href='#services' class='nav-link'>Services</a>
-                        <a href='#contact' class='nav-link'>Contact</a>
-                    </nav>
+                    <ul class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
+                        <li class="nav-item">
+                            <a href="/index.html#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='/index.html#projects' class='nav-link'>Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='/index.html#services' class='nav-link'>Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='/index.html#contact' class='nav-link'>Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="php/index.html">PHP</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section class='row'>
                 <div class='col-6 text-center'>
                     <h2>PHP</h2>
-                    <nav class="nav flex-column">
-                        <a href="php/index.html">Introduction</a>
-                    </nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#basics">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#variables">Variables</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-6 text-center">
                     <div class="row">
                         <div class="col-12">
-                            <h2>The Basics</h2>
-                            <p class="text-justify">In this tutorial we will learn the different character types and how they are used.</p>
+                            <h2 id="basics">The Basics</h2>
+                            <p class="text-justify">
+                                In this tutorial we will learn the different character types and how they are used.
+                                This tutorial will follow standardization known as PHP Standards Recommendations (PSR), found <a href="https://www.php-fig.org/psr/" target="_blank">here</a>.
+                            </p>
+                            <h2>Basic file structure</h2>
+                            <p>In PSR-1 we can use either &lt;?php or &lt;?= to open a PHP document. However, for this tutorial we will stick to using &lt;?php</p>
+                            <pre class='language-php'>  
+                            <code>
+                                &lt;?php<br/>
+                                <br/><br/>
+                                ?&gt;
+                            </code>
+                            </pre>
+                            <p>
+                                Above is an opened and closed PHP document, of course the file extension must be .php.
+                            </p>
                         </div>
                     </div>
                     <div class="row">
                         <p>PHP supports the following character types: String, Integer, Boolean, Float, Array, Object, and NULL.</p>
                     </div>
                     <div class="row">
+
+                        <h2 id='variables'>Variables</h2>
+                        <p>A variable is a value that can change. Its opposite is a constant.</p>
                         <h2>Strings</h2>
                         <p>A string is a series of characters, a string is determined by wrapping characters in either double-quotation or single-quotation marks.</p>
                         <pre class='language-php'>    
                             <code>
-                                $String = "I'm a string!";</br>
-                                $StringToo = 'I am also a string!';</br>
+                                &lt;?php<br/>
+                                $String = "I'm a string!";<br/>
+                                $StringToo = 'I am also a string'.;<br/>
+                                ?&gt;
+                            </code>
+                        </pre>
+                        <h2>Booleans and Numbers</h2>
+                        <p>Booleans are a logic device, the value is either true or false.</p>
+                        <pre class='language-php'>    
+                            <code>
+                                &lt;?php<br/>
+                                $booleanTrue = TRUE;<br/>
+                                $booleanFalse = FALSE;<br/>
+                                ?&gt;
+                            </code>
+                        </pre>
+                        <p>PHP, being based on C languages, has a few options for holding numbers. The first of these, an integer, is any whole number. The second is a float. PHP does not differentiate between floats and doubles. The third is array, then objects, nulls, and resources.</p>
+                        <pre class='language-php'>    
+                            <code>
+                                &lt;?php<br/>
+                                $integer = 1;<br/>
+                                $float = 1.1;<br/>
+                                $array = array();<br/>
+                                $object = new foo();<br/>
+                                $objectCall = $object->bar();<br/>
+                                $null = NULL;<br/>
+                                $resource = file_get_contents();<br/>
+                                ?&gt;
                             </code>
                         </pre>
                     </div>
