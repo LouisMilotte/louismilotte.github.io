@@ -136,6 +136,9 @@
                         <li class="nav-item">
                             <a href="#variables">Variables</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" onclick='alert("Sorry, this page is coming soon.")'>Hello, World!</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-6 text-center">
@@ -161,35 +164,49 @@
                         </div>
                     </div>
                     <div class="row">
-                        <p>PHP supports the following character types: String, Integer, Boolean, Float, Array, Object, and NULL.</p>
+                        <div class='col-12'>
+                            <p>PHP supports the following character types: String, Integer, Boolean, Float, Array, Object, and NULL.</p>
+                        </div>
                     </div>
                     <div class="row">
-
-                        <h2 id='variables'>Variables</h2>
-                        <p>A variable is a value that can change. Its opposite is a constant.</p>
-                        <br/>
-                        <h2>Strings</h2><br/>
-                        <p>A string is a series of characters, a string is determined by wrapping characters in either double-quotation or single-quotation marks.</p>
-                        <pre class='language-php text-left'>    
+                        <div class='col-12'>
+                            <h2 id='variables'>Variables</h2>
+                            <p>A variable is a value that can change. Its opposite is a constant.</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <h2>Strings</h2><br/>
+                            <p>A string is a series of characters, a string is determined by wrapping characters in either double-quotation or single-quotation marks.</p>
+                            <pre class='language-php text-left'>    
                             <code>
                                 &lt;?php<br/>
                                 $String = "I'm a string!";<br/>
                                 $StringToo = 'I am also a string'.;<br/>
                                 ?&gt;
                             </code>
-                        </pre>
-                        <h2>Booleans and Numbers</h2><br/>
-                        <p>Booleans are a logic device, the value is either TRUE or FALSE.</p>
-                        <pre class='language-php text-left'>    
+                            </pre>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <h2>Booleans and Numbers</h2><br/>
+                            <p>Booleans are a logic device, the value is either TRUE or FALSE.</p>
+                            <pre class='language-php text-left'>    
                             <code>
                                 &lt;?php<br/>
                                 $booleanTrue = TRUE;<br/>
                                 $booleanFalse = FALSE;<br/>
                                 ?&gt;
                             </code>
-                        </pre>
-                        <p>PHP, being based on C languages, has a few options for holding numbers. The first of these, an integer, is any whole number. The second is a float. PHP does not differentiate between floats and doubles. The third is array, then objects, nulls, and resources.</p>
-                        <pre class='language-php text-left'>    
+                            </pre>
+                        </div>
+                    </div>
+                    <div class='row'>
+
+                        <div class='col-12'>
+                            <p>PHP, being based on C languages, has a few options for holding numbers. The first of these, an integer, is any whole number. The second is a float. PHP does not differentiate between floats and doubles. The third is array, then objects, nulls, and resources.</p>
+                            <pre class='language-php text-left'>    
                             <code>
                                 &lt;?php<br/>
                                 $integer = 1;<br/>
@@ -201,7 +218,8 @@
                                 $resource = file_get_contents();<br/>
                                 ?&gt;
                             </code>
-                        </pre>
+                            </pre>
+                        </div>
                     </div>
                 </div>
             </section>
