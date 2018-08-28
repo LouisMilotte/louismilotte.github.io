@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel='stylesheet' href='../../css/prism.css'>
         <style>
+            .tut-fixed-top{
+                position:fixed;
+                top:0;
+                left:13.5%;
+            }
             img {
                 max-height:100%;
                 max-width:100%;
@@ -104,44 +109,47 @@
             </section>
             <section class="row">
                 <div class="col-12" id="main-nav-container">
-                    <ul class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
-                        <li class="nav-item">
-                            <a href="/index.html#about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='/index.html#projects' class='nav-link'>Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='/index.html#services' class='nav-link'>Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='/index.html#contact' class='nav-link'>Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="tutorials/php/index.html">PHP</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <nav class="navbar navbar-expand-lg" id="main-nav">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a href="/index.html#about" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href='/index.html#projects' class='nav-link'>Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href='/index.html#services' class='nav-link'>Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href='/index.html#contact' class='nav-link'>Contact</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="tutorials/php/index.html">PHP</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PHP</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#basics">Introduction</a>
+                                        <a class="dropdown-item" href="#variables">Variables</a>
+                                        <a class="dropdown-item" href="#" onclick='alert("Sorry, this page is coming soon.")'>Hello, World!</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </section>
             <section class='row'>
-                <div class='col-6'>
-                    <h2>PHP</h2>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#basics">Introduction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#variables">Variables</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" onclick='alert("Sorry, this page is coming soon.")'>Hello, World!</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6">
+                <div class="col-12">
                     <div class="row">
                         <div class="col-12">
                             <h2 id="basics">The Basics</h2>
@@ -151,13 +159,11 @@
                             </p>
                             <h2>Basic file structure</h2>
                             <p>In PSR-1 we can use either &lt;?php or &lt;?= to open a PHP document. However, for this tutorial we will stick to using &lt;?php</p>
-                            <pre class='language-php text-left'>  
-                            <code>
+                            <code class='language-php'>
                                 &lt;?php<br/>
                                 <br/>
                                 ?&gt;
                             </code>
-                            </pre>
                             <p>
                                 Above is an opened and closed PHP document, of course the file extension must be .php.
                             </p>
@@ -178,36 +184,31 @@
                         <div class='col-12'>
                             <h2>Strings</h2><br/>
                             <p>A string is a series of characters, a string is determined by wrapping characters in either double-quotation or single-quotation marks.</p>
-                            <pre class='language-php text-left'>    
-                            <code>
+                            <code class='language-php'>
                                 &lt;?php<br/>
                                 $String = "I'm a string!";<br/>
                                 $StringToo = 'I am also a string'.;<br/>
                                 ?&gt;
                             </code>
-                            </pre>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col-12'>
                             <h2>Booleans and Numbers</h2><br/>
                             <p>Booleans are a logic device, the value is either TRUE or FALSE.</p>
-                            <pre class='language-php text-left'>    
-                            <code>
+                            <code class='language-php'>
                                 &lt;?php<br/>
                                 $booleanTrue = TRUE;<br/>
                                 $booleanFalse = FALSE;<br/>
                                 ?&gt;
                             </code>
-                            </pre>
                         </div>
                     </div>
                     <div class='row'>
 
                         <div class='col-12'>
                             <p>PHP, being based on C languages, has a few options for holding numbers. The first of these, an integer, is any whole number. The second is a float. PHP does not differentiate between floats and doubles. The third is array, then objects, nulls, and resources.</p>
-                            <pre class='language-php text-left'>    
-                            <code>
+                            <code class='language-php'>
                                 &lt;?php<br/>
                                 $integer = 1;<br/>
                                 $float = 1.1;<br/>
@@ -218,7 +219,6 @@
                                 $resource = file_get_contents();<br/>
                                 ?&gt;
                             </code>
-                            </pre>
                         </div>
                     </div>
                 </div>
@@ -248,6 +248,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src='../../js/prism.js'>
+        </script>
+        <script>
+            $(window).scroll(function () {
+                if (window.innerWidth > 414) {
+                    if ($(document).scrollTop() > 114) {
+                        $('#main-nav-container').addClass('fixed-top');
+                    } else {
+                        $('#main-nav-container').removeClass('fixed-top');
+                    }
+                }
+            });
         </script>
     </body>
 </html>
