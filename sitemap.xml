@@ -24,7 +24,39 @@
 
    <url>
 
-      <loc>https://louismilotte.github.io/tutorials</loc>
+      <loc>https://louismilotte.github.io/ecommerce.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://louismilotte.github.io/accessibility.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://louismilotte.github.io/informational.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://louismilotte.github.io/security.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://louismilotte.github.io/contact.html</loc>
 
       <changefreq>weekly</changefreq>
 

@@ -6,6 +6,11 @@ Disallow: .gitignore
 Disallow: LICENSE
 Disallow: README.md
 Allow: https://louismilotte.github.io/index.html
+Allow: https://louismilotte.github.io/contact.html
+Allow: https://louismilotte.github.io/security.html
+Allow: https://louismilotte.github.io/informational.html
+Allow: https://louismilotte.github.io/ecommerce.html
+Allow: https://louismilotte.github.io/accessibility.html
 Allow: https://louismilotte.github.io/robots.txt
 Allow: https://louismilotte.github.io/sitemap.xml
 Sitemap: https://louismilotte.github.io/sitemap.xml
