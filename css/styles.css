@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 16, 2019, 6:07:16 PM
+    Author     : Louis Milotte
+*/
+/* Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+*//* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+ }
+
+/*/ Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+	.right-divider{
+		border-right:1px solid black;
+	}
+}
+
+/*/ Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+	.right-divider{
+		border-right:1px solid black;
+	}
+}
+
+/*/ Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+	.right-divider{
+		border-right:1px solid black;
+	}
+}
+
+.mission{
+	margin-bottom:5%;
+}

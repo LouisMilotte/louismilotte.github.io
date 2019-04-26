@@ -4,360 +4,102 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee.">
-        <meta name="author" content="Louis Milotte">
-        <meta http-equiv="Cache-control" content="public">
-        <meta name="keywords" content="php,javascript,jquery,lamp,css,html,html5,css3,laravel,bootstrap,twitter,twitter bootstrap,responsive,design, responsive design, bulma, pdo, mysql, mysqli, object, oriented, programming, oop, mvc,model,view,controller,contractor,independent,hire,richmond,virginia,usa,va,united states,united states of america,america,american">
-        <meta property="og:title" content="Louis Milotte LAMP Software Consultant">
-        <meta property="og:image" content="media/PHP_Logo,_text_ony.png">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Louis Milotte Softare Consultant">
-        <meta property="og:url" content="https://louismilotte.github.io">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="https://louismilotte.github.io" />
-        <meta name="twitter:title" content="SLouis Milotte LAMP Software Consultant" />
-        <meta name="twitter:description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee." />
-        <meta name="twitter:image" content="https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM" />
-        <meta name="og:description" content="Louis Milotte is a LAMP Software Consultant. This is his portfolio site, by which is hirable as an independent contractor or as an employee.">
+        <link rel=icon href=media/php_favicon.png sizes="16x16" type="image/png">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <style>
-            img {
-                max-height:100%;
-                max-width:100%;
-            }
-            #linkedin{
-                /**image**/
-                height:50px;
-                width:50px;
-            }
-            #b2t-container img{
-                position:fixed;
-                right: 1%;
-                top:50%;
-                height:auto;
-                width:100px;
-                display:none;
-                z-index:999;
-            }
-            #services .card{
-                height:420px !important;
-            }
-            #projects .card{
-                height: 174px !important;
-            }
-            body{
-                color:#403f45 !important;
-            }
-            .section-header{
-                color:#e6ce1d !important;
-                background-color: #3B3A40 !important;
-                margin-top:5%;
-                padding-top:1%;
-                padding-bottom:1%;
-                padding-left:1%;
-            }
-            #projects a{
-                color:black;
-            }
-            #main-nav a{
-                color:#e6ce1d !important;
-                text-decoration: none;
-            }
-            #main-nav a:hover{
-                color: white !important;
-            }
-            #main-nav-container{
-                background-color:#3B3A40;
-                margin-bottom:1% !important;
-            }
-            footer img{
-                height:auto;
-                width:50px;
-            }
-            .section-header img{
-                height:auto;
-                width:100%;
-            }
-            p{
-                font-size: 12pt;
-            }
-            @media screen  and (min-width: 501px) /* Tablet and above */ {
-                #me{
-                    width:15%;
-                    height:auto;
-                }
-            }
-
-            @media screen and (max-width: 500px) /* Mobile */ {
-                #media{
-                    height:auto;
-                    width:25%;
-                }
-                #services img{
-                    height:auto;
-                    width:50% !important;
-                    margin-left: 25%!important;    
-                }
-            }
-            #message{
-                font-size: 11pt;
-            }
-        </style>
-        <title>Louis Milotte Software Consultant</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <title>Web Software Consultant</title>
     </head>
     <body>
-        <article class="container">
+        <article class="container-fluid">
             <header class="row">
+                <div class="col-4">
+                    <h1>Louis Milotte Web Software Consultant</h1>
+                </div>
             </header>
             <section class="row">
-                <aside class="col-12">
-                    <h1 id="header-line" class="lg-offset-4 md-offset-4 sm-offset-4 xs-offset-0">Louis Milotte <small>LAMP Full Stack Consultant</small></h1>
-                </aside>
+				<div class="col-6 offset-4">
+					<h2 class="text-center">Services</h2>
+				</div>
             </section>
             <section class="row">
-                <div class="col-12" id="main-nav-container">
-                    <ul class="nav lg-offset-4 md-offset-4 sm-offset-4  xs-offset-0" id="main-nav">
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='#projects' class='nav-link'>Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='#services' class='nav-link'>Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href='#contact' class='nav-link'>Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tutorials</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="tutorials/php/index.html">PHP</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+				<div class="col-3 offset-4 service">
+					<h5 class="text-center">E-Commerce Website Engineering</h5>
+					<p >
+						Going from a managed store or Brick and Mortar storefront to a specialized e-store solution is a bumpy path. My service lays out how best to achieve your independence as a real entrepreneur.
+					</p>
+					<p>
+						<a href="ecommerce.html">
+							<button type="button" class="btn btn-link">Read More...</button>
+						</a>
+					</p>
+				</div>
+				<div class="col-3 service">
+					<h5 class="text-center">Informational Website Engineering</h5>
+					<p >
+						You have a voice, an idea, or company presence that needs a centralized public affairs route. Engaging your audience can be an explosive hit - or a damning bomb. The difference can be as obscure as the right platform.
+					</p>
+					<p>
+						<a href="informational.html">
+							<button type="button" class="btn btn-link">Read More...</button>
+						</a>
+					</p>
+				</div>
             </section>
-            <section class='row'>
-                <div class="col-12" id="about">
-                    <h2 class="section-header">About Me</h2>
-                    <p class='text-justify'>
-                        <img alt="A black and white image of the developer's face" class='rounded-circle pull-left' id="me" src='https://media.licdn.com/dms/image/C5103AQFpBlGEdKlSDQ/profile-displayphoto-shrink_200_200/0?e=1536796800&v=beta&t=zVJg6FgI1_4YcTHtAXMrHqaiDhWlw_8-i7d0BPdaDbM'/>
-                        <span id='message' class='text-justify'>Hello!, I am Louis Milotte  a Full-Stack LAMP Software Consultant. I specialize in E-Commerce applications and support informational websites.</span>
-                    </p>
-                </div>
+            <section class="row">
+				<div class="col-3 offset-4 service">
+					<h5 class="text-center">Third-Party Security Auditing</h5>
+					<p >
+						Any software that has access to the Internet is at tremendous risk for hackers. My auditing tracks down even the least obvious attack vectors to make sure your company keeps running. A single attack can cost a corporation millions, don't go bankrupt over such an important step.
+					</p>
+					<p>
+						<a href="security.html">
+							<button type="button" class="btn btn-link">Read More...</button>
+						</a>
+					</p>
+				</div>
+				<div class="col-3 service">
+					<h5 class="text-center">Accessibility Auditing</h5>
+					<p >
+						Most software developers forget that persons with disabilities use the Internet. Your application needs to be WCAG compliant or if you're part of the USA government - Section 508.
+					</p>
+					<p>
+						<a href="accessibility.html">
+							<button type="button" class="btn btn-link">Read More...</button>
+						</a>
+					</p>
+				</div>
             </section>
-            <section class='row' id='projects'>
-                <div class='col-12'>
-                    <h2 class="section-header">Projects</h2>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3><a href="http://www.swaintechs.com/" title="Swains TechSpac">Swains TechSpac</a></h3>
-                    <p>I created a cleaner user experience with Twitter Bootstrap.</p>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Carmae Office Products</h3>
-                    <p>Web-Master for their E-Commerce platform. I created a easy to use Administration Panel with CodeIgniter and Twitter Bootstrap</p>
-
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Prism Developments</h3>
-                    <p>I created a WordPress plugin that took S/FTP transfered images from their security cameras for display to investors.</p>
-                </div>
-                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 animation-panel'>
-                    <h3>Good For You Gaming</h3>
-                    <p>I created an Asset Management System using Twitter Bootstrap and CodeIgniter</p>
-                </div>
+            <section class="row">
+				<div class="col-6 offset-4">
+					<p>
+						<a class="btn btn-primary w-100" href="contact.html">Contact Me</a>
+					</p>
+				</div>
             </section>
-            <section class='row'>
-                <div class='col-12' id='services'>
-                    <h2 class="section-header" style="width:100%;">Services</h2>
-                    <div class='row'>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='black and white PHP logo' src='media/PHP_Logo,_text_only.png' details='php'/></p>
-                            <p>PHP Data Objects are used to drive database applications.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white HTML5 logo' src='media/HTML5_logo_black.png' details='html5'/></p>
-                            <p>Utilize the latest in User Interface Design. Go from boring Jane Doe to the talk around the industry.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white CSS logo' src='media/css_logo.png' details='css'/></p>
-                            <p>Take advantage of one-app multi-device design. Save overhead on development and maintenance, optimize user experience.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='black and white jQuery logo' src='media/jquery_logo.png' details='jquery'/></p>
-                            <p>Reach a wider audience and unique interactive designs with jQuery.</p>
-
-                        </div>
-                        <div class="col-12"></div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white MySQL logo' src='media/MySQL-logo.png' details='mysql'/></p>
-                            <p>Your business needs a powerful database behind it. The age tested and industry strong MySQL is that foundation.</p>
-
-                        </div>  
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='black and white WordPress logo' src='media/WordPress-logotype-alternative.png' details='wordpress'/></p>
-                            <p>With a large developer community, WordPress has what most companies need. From informational blog-like websites to E-Commerce integration.</p>
-
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p class=""><img alt='codeingiter black and white logo' src='media/codeigniter-logo.png' details='codeigniter'/></p>
-                            <p>A diverse framework that can deliver application interfaces, CMSs, and E-Commerce websites with high mutability as your business grows.</p>
-
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='twitter bootstrap black and white logo' src='media/twitter-bootstrap-logo.png' details='bootstrap'/></p>
-                            <p>With most of your customer base using their Smartphones you need to reach them with designs that appeal. Twitter Bootstrap is a one-design multiple device framework</p>
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='laravel black and white logo' src='media/laravel_bw.png' details='laravel'/></p>
-                            <p>Laravel makes for rapid and elegant application development without dependence on a specific DBMS, with revolutionary platform design.</p>
-                        </div>   
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='angular black and white logo' src='media/angular_solidBlack.png' details='angular'/></p>
-                            <p>Angular is a progressive cross-platform framework with high-speeds in development and performance with universal application.</p>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='bulma black and white logo' src='media/bulma.png' details='bulma'/></p>
-                            <p>Bulma is a light-weight JS-less responsive framework.</p>
-                        </div>
-                        <div class='col-lg-3 col-md-3 col-sm-3 col-xs-6 service-item animation-panel'>
-                            <p><img alt='nodejs black and white logo' src='media/nodejs.png' details='nodejs'/></p>
-                            <p>Is an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection the callback is fired, but if there is no work to be done, Node will sleep.</p>
-                        </div>
-                    </div>
-                </div>
-                <div id='b2t-container'>
-                    <a href='#'><img alt='Scroll to top button' src='media/top-button.png'/></a>
-                </div>
-            </section>
-            <footer class="row" id="contact">
-                <div class='col'>
-                    <h3 class="section-header">Legal</h3>
-                    <p>&copy; Louis Milotte All Rights Reserved</p>
-                    <p>Powered By GitHub Pages and Twitter Bootstrap</p>
-                    <p>WCAG2AAA Compliant - Tested With Pa11y</p>
-                    <p>Images are properties of their artists. Descriptions are either quoted from or derived from their respected websites.</p>
-                </div>
+            <footer class="row">
                 <div class="col">
-                    <h3  class="section-header">Contact</h3>
-                    <nav class='nav'>
-                        <a href="https://www.linkedin.com/in/louis-milotte-27581b59/" class='nav-link' title="My LinkedIn Page"><img id='linkedin' alt='black and white linkedin logo' src="media/linkedin_bw.jpg" class="img img-responsive"/></a>
-                        <a href="https://github.com/LouisMilotte" class='nav-link' title="My GitHub Page"><img id='github' alt='black and white github logo' src="media/github-solid.png" class="img img-responsive"/></a>
-                        <a href="mailto:louis.milotte@yahoo.com" class="nav-link" title="My E-Mail Address"><img id='mailto' alt='black and white envolope' src="media/black-envelope-icon-on-white-background-vector-13695153.jpg" class="img img-responsive"/></a>
-                        <a class='nav-link' href='https://docs.google.com/forms/d/e/1FAIpQLSfvkwdkK3QgRoZHnLnf-vOwpTGC1E3Ex80SK1xwQ4wh2aq4pg/viewform' title="Contact Request Form"><img alt='request contact form' src='media/form.png'/></a>
-                    </nav>
-                </div>
-                <div itemscope itemtype="http://schema.org/Service" style="display:none;">
-                    <meta itemprop="serviceType" content="Home cleaning" />
-                    <span itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness">
-                        <span itemprop="name">Louis Milotte Software Consultant</span>
-                    </span>
-                    <span itemprop="areaServed" itemscope itemtype="http://schema.org/State">
-                        <span itemprop="name">Virginia</span>
-                    </span>
-                    <ul itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
-                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
-                            <span itemprop="name">Software Development</span>
-                            <ul itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">PHP</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">HTML5</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">Twitter Bootstrap</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">JavaScript</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">jQuery</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">CSS</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">Responsive Design</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">Laravel</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">CodeIgniter</span>
-                                    </div>
-                                </li>
-                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                                    <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
-                                        <span itemprop="name">WordPress</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+					<h5>Legal</h5>
+					<p>&copy; Louis Milotte 2019</p>
+					<p>Powered By Twitter Bootstrap</p>
                 </div>
             </footer>
         </article>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script>
-            $("#mailto").hover(function () {
-                $("#mailto").attr("src", "media/open-envelope_318-28018.jpg");
-            }, function () {
-                $("#mailto").attr("src", "media/black-envelope-icon-on-white-background-vector-13695153.jpg");
-            });
-
-            $("#github").hover(function () {
-                $("#github").attr("src", "media/github-eyes.png");
-            }, function () {
-                $("#github").attr("src", "media/github-solid.png");
-            });
-            $(document).scroll(function () {
-                if ($(document).scrollTop() > 0) {
-                    $("#b2t-container img").css("display", "block");
-                } else {
-                    $("#b2t-container img").css("display", "none");
-                }
-            });
-            $("#b2t-container img").click(function () {
-                $(this).scrollTop(0);
-            });
-            $("#linkedin").hover(function () {
-                $("#linkedin").attr("src", "media/linkedin_wb.png");
-            }, function () {
-                $("#linkedin").attr("src", "media/linkedin_bw.jpg");
-            });
-        </script>
-        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-        <script>
-            window.sr = ScrollReveal({duration: 2000});
-            sr.reveal(".animation-panel");
-            sr.reveal("#me", {origin: "left"});
-            sr.reveal("#message", {origin: "right"});
-        </script>
+		<script>
+			$(document).ready(function(){
+				var servicesHeight = 0;
+				
+				$(".service").find("p:first").each(function(){
+					if($(this).height() > servicesHeight){
+						servicesHeight = $(this).height();
+					}
+				});
+				
+				$(".service").find("p:first").css("height",servicesHeight);
+			});
+		</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
