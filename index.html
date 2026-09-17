@@ -157,7 +157,7 @@
                     
                     function detectPageMoved(){
                         var fromTop = window.screenY ?? window.screenTop;
-                        var navbarRect = document.getElementById("#main_navbar").getBoundClientRect();
+                        var navbarRect = document.getElementById("main_navbar").getBoundClientRect();
                         
                         if(fromTop >= navbarRect.top){
                             document.getElementById("back_to_top").classList.remove("hidden");
