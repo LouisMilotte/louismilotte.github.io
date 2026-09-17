@@ -3,13 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title>Louis Milotte - Web Development</title>
         <style>
             .text-justify{
                 text-align: justify !important;
             }
             .hidden{
                 display:none !important;
+            }
+            .end-10{
+                right:10% !important;
             }
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -20,7 +23,6 @@
                 <div class='col-12'>
                     <nav class="navbar navbar-expand-lg bg-body-tertiary" id='main_navbar'>
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar scroll</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -38,25 +40,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#contact_page">Contact Me</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Link
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" aria-disabled="true">Link</a>
-                                    </li>
                                 </ul>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
                             </div>
                         </div>
                     </nav>
@@ -143,8 +127,8 @@
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1mIUgC0dyWXqWaT1uYxxb1LLAzpPB4uRNeW1wWJPXOEep-g/viewform?embedded=true" width="640" height="934" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </section>
-            <section class='row hidden' id='back_to_top'>
-                <span class='col-2'>^</span>
+            <section class='row hidden position-fixed bottom-0 end-10' id='back_to_top'>
+                <span class='btn btn-primary btn-lg'>^</span>
                 <script>
                     const BTP = document.querySelector("#back_to_top span");
                     
@@ -156,18 +140,23 @@
                     });
                     
                     function detectPageMoved(){
-                        var fromTop = window.screenY ?? window.screenTop;
-                        var navbarRect = document.getElementById("main_navbar").getBoundClientRect();
-                        
-                        if(fromTop >= navbarRect.top){
+                        console.log("firing");
+                        var fromTop = window.scrollY;
+                        var navbar = document.getElementById("main_navbar");
+                        var navbarRect = navbar.getBoundingClientRect();
+                        console.log((fromTop >= (navbarRect.top + navbar.offsetHeight)));
+                        if(fromTop >= (navbarRect.top + navbar.offsetHeight)){
                             document.getElementById("back_to_top").classList.remove("hidden");
                         }else{
                             document.getElementById("back_to_top").classList.add("hidden");
                         }
                     }
                     
-                    document.querySelector("#main_navbar a").addEventListener("click",detectPageMoved());
-                    window.addEventListener("scroll",detectPageMoved());
+                    document.querySelector("#main_navbar a").addEventListener("click",detectPageMoved);
+                    window.addEventListener("scroll",detectPageMoved);
+                    window.onload = function(){
+                        BTP.style.height = BTP.style.width;
+                    };
                 </script>
             </section>
             <footer class="row  mt-5 mb-5">
