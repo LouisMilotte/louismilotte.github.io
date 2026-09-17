@@ -18,7 +18,7 @@
         <article class="container-fluid">
             <header class="row  mt-5 mb-5">
                 <div class='col-12'>
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary" id='main_navbar'>
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#">Navbar scroll</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,6 +142,33 @@
                 <div class='col-xs-12 col-md-4 offset-md-4'>
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1mIUgC0dyWXqWaT1uYxxb1LLAzpPB4uRNeW1wWJPXOEep-g/viewform?embedded=true" width="640" height="934" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
+            </section>
+            <section class='row hidden' id='back_to_top'>
+                <span class='col-2'>^</span>
+                <script>
+                    const BTP = document.querySelector("#back_to_top span");
+                    
+                    BTP.addEventListener("click",function(){
+                        window.scrollTo({
+                            top: 0,
+                            behavior:"smooth"
+                        });
+                    });
+                    
+                    function detectPageMoved(){
+                        var fromTop = window.screenY ?? window.screenTop;
+                        var navbarRect = document.getElementById("#main_navbar").getBoundClientRect();
+                        
+                        if(fromTop >= navbarRect.top){
+                            document.getElementById("back_to_top").classList.remove("hidden");
+                        }else{
+                            document.getElementById("back_to_top").classList.add("hidden");
+                        }
+                    }
+                    
+                    document.querySelector("#main_navbar a").addEventListener("click",detectPageMoved());
+                    window.addEventListener("scroll",detectPageMoved());
+                </script>
             </section>
             <footer class="row  mt-5 mb-5">
                 <div class="col">
