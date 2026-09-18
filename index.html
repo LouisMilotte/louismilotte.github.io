@@ -15,6 +15,7 @@
                 right:10% !important;
             }
         </style>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
     <body>
@@ -40,6 +41,36 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#contact_page">Contact Me</a>
                                     </li>
+                                    <script>
+                                        $(function(){
+                                            const currentActive = $(".nav-link.active").attr("href").replace("#", "");
+                                            $("section.row").each(function () {
+                                                if ($(this).attr("id") !== currentActive) {
+                                                    $(this).addClass("hidden");
+                                                }
+                                            });
+                                        });
+                                        $("#main_navbar .nav-link").on("click", function () {
+                                            const clickedElement = $(this).attr("href");
+                                            $("#main_navbar .nav-link").each(function () {
+                                                if ($(this).attr("href") !== clickedElement && $(this).hasClass("active")) {
+                                                    $(this).removeClass("active");
+                                                    $(this).removeAttr("aria-current");
+                                                } else if ($(this).attr("href") === clickedElement && !$(this).hasClass("active")) {
+                                                    $(this).addClass("active");
+                                                    $(this).attr("aria-current", "active");
+                                                }
+                                            });
+
+                                            $("section.row").each(function () {
+                                                if ($(this).attr("id") !== clickedElement.replace("#","")) {
+                                                    $(this).addClass("hidden");
+                                                } else {
+                                                    $(this).removeClass("hidden");
+                                                }
+                                            });
+                                        });
+                                    </script>
                                 </ul>
                             </div>
                         </div>
@@ -131,30 +162,26 @@
                 <span class='btn btn-primary btn-lg'>^</span>
                 <script>
                     const BTP = document.querySelector("#back_to_top span");
-                    
-                    BTP.addEventListener("click",function(){
+                    BTP.addEventListener("click", function () {
                         window.scrollTo({
                             top: 0,
-                            behavior:"smooth"
+                            behavior: "smooth"
                         });
                     });
-                    
-                    function detectPageMoved(){
-                        console.log("firing");
+                    function detectPageMoved() {
                         var fromTop = window.scrollY;
                         var navbar = document.getElementById("main_navbar");
                         var navbarRect = navbar.getBoundingClientRect();
-                        console.log((fromTop >= (navbarRect.top + navbar.offsetHeight)));
-                        if(fromTop >= (navbarRect.top + navbar.offsetHeight)){
+                        if (fromTop >= (navbarRect.top + navbar.offsetHeight)) {
                             document.getElementById("back_to_top").classList.remove("hidden");
-                        }else{
+                        } else {
                             document.getElementById("back_to_top").classList.add("hidden");
                         }
                     }
-                    
-                    document.querySelector("#main_navbar a").addEventListener("click",detectPageMoved);
-                    window.addEventListener("scroll",detectPageMoved);
-                    window.onload = function(){
+
+                    document.querySelector("#main_navbar a").addEventListener("click", detectPageMoved);
+                    window.addEventListener("scroll", detectPageMoved);
+                    window.onload = function () {
                         BTP.style.height = BTP.style.width;
                     };
                 </script>
