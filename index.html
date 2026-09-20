@@ -5,14 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Louis Milotte - Web Development</title>
         <style>
-            .text-justify{
-                text-align: justify !important;
-            }
             .hidden{
                 display:none !important;
             }
             .end-10{
                 right:10% !important;
+            }
+            .cf-wrapper{
+                height:1300px !important;
+            }
+            [data-content] .card{
+                min-height: 490px !important;
+            }
+            [data-content] .card .img-thumbnail{
+                border:none !important;
+                max-height:80px !important;
+            }
+            footer .img-thumbnail{
+                border:none !important;
+                max-height:50px !important;
+            }
+            .custom-active, .custom-active .active, .btn.btn-primary{
+                background: linear-gradient(45deg, #0d6efd, #0dcaf0) !important;
+                color: white !important;
+                border-radius: 0.375rem;
             }
         </style>
         <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
@@ -20,187 +36,215 @@
     </head>
     <body>
         <article class="container-fluid">
-            <header class="row  mt-5 mb-5">
-                <div class='col-12'>
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary" id='main_navbar'>
+            <header class="row">
+                <div class='col-12' style='background-color:rgba(43, 48, 53, 1) !important;'>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark" id='main_navbar'>
                         <div class="container-fluid">
+                            <a class="navbar-brand text-primary" href="#">Louis | Website Development</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarScroll">
-                                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll text-white" style="--bs-scroll-height: 100px;">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#home_page">Home</a>
+                                        <a class="nav-link active" aria-current="page" href="#" data-page="home_page">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#services_page">Services</a>
+                                        <a class="nav-link" href="#" data-page="competencies_page">Competencies</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#technology_page">Technology</a>
+                                        <a class="nav-link" href="#" data-page="contact_page">Contact Me</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#contact_page">Contact Me</a>
+                                        <a href="https://github.com/LouisMilotte?tab=repositories" class="nav-link" target="_blank">Code Repositories</a>
                                     </li>
-                                    <script>
-                                        $(function(){
-                                            const currentActive = $(".nav-link.active").attr("href").replace("#", "");
-                                            $("section.row").each(function () {
-                                                if ($(this).attr("id") !== currentActive) {
-                                                    $(this).addClass("hidden");
-                                                }
-                                            });
-                                        });
-                                        $("#main_navbar .nav-link").on("click", function () {
-                                            const clickedElement = $(this).attr("href");
-                                            $("#main_navbar .nav-link").each(function () {
-                                                if ($(this).attr("href") !== clickedElement && $(this).hasClass("active")) {
-                                                    $(this).removeClass("active");
-                                                    $(this).removeAttr("aria-current");
-                                                } else if ($(this).attr("href") === clickedElement && !$(this).hasClass("active")) {
-                                                    $(this).addClass("active");
-                                                    $(this).attr("aria-current", "active");
-                                                }
-                                            });
 
-                                            $("section.row").each(function () {
-                                                if ($(this).attr("id") !== clickedElement.replace("#","")) {
-                                                    $(this).addClass("hidden");
-                                                } else {
-                                                    $(this).removeClass("hidden");
-                                                }
-                                            });
-                                        });
-                                    </script>
                                 </ul>
                             </div>
                         </div>
                     </nav>
                 </div>
             </header>
-            <section class="row  mt-5 mb-5" id='home_page'>
-                <div class='col-12 text-center'>
-                    <h1>Home</h1>
+            <section class="row bg-dark mb-5 pt-5 pb-5" data-content='home_page'>
+                <div class='col-md-6 offset-md-3 col-xs-8 offset-xs-2'>
+                    <h1 class='text-primary  pt-2 pb-2'>Full-Stack Website Developer & LAMP Engineer</h1>
+                    <p class="text-white  pt-2 pb-2">Specializing in Laravel and WordPress solutions, and interactive WCAG-UI compliant websites.</p>
                 </div>
-                <div class='col-12'>
-                    <h2 class='badge text-center bg-primary text-white mb-2'>Website Software Developer</h2>
-                    <p class='text-justify'>I build dynamic websites supported by desktop, laptops, tablets, and phones using a responsive design library. I create robust applications centered around informational or E-Commerce websites.</p>
-                </div>
-            </section>
-            <section class="row  mt-5 mb-5" id='services_page'>
-                <div class='col-12 text-center'>
-                    <h1>Services</h1>
-                </div>
-                <div class='col col-xs-12'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>Informational Websites</h2>
-                    <p class='text-justify'>Informational websites are much like the one you are looking at right now, it tells a potential customer about your business, products, and services, but lacks the means to electronically purchase those products or services.</p>
-                    <p class='text-justify'>Options for Informational Websites: Static Custom Pages or Content Management Systems</p>
-                </div>
-                <div class='col col-xs-12'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>E-Commerce Websites</h2>
-                    <p class='text-justify'>E-Commerce Websites are websites that behave like Informational Websites. However, they allow customers to electronically purchase products and or services.</p>
-                    <p class='text-justify'>Options for E-Commerce Websites: Content Management Systems, Development Frameworks, and API Payment Processing.</p>
+                <div class='col-md-6 offset-md-3 col-xs-8 offset-xs-2 pt-2 pb-2'>
+                    <a href="https://github.com/LouisMilotte?tab=repositories" class="btn btn-primary" target="_blank">Code Repositories</a>
                 </div>
             </section>
-            <section class='row  mt-5 mb-5' id='technology_page'>
-                <div class='col-12 text-center'>
-                    <h1>Technology</h1>
+            <section class="row  mt-5 mb-5" data-content='competencies_page'>
+                <div class='col-12 text-center mb-5'>
+                    <h1>Core Competencies</h1>
                 </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>HTML5</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>CSS</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>JavaScript</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>jQuery</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>PHP/PDO</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>MySQL</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>GetBootstrap</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>WordPress</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>Laravel</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>WCAG/Section 508</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
-                </div>
-                <div class='col-3'>
-                    <h2 class='badge bg-primary text-center text-white mb-2'>Git/Github</h2>
-                    <p class='text-justify'>lorem ipsum dolor sit amet consectetur adipiscing elit aliqua nisi et irure incididunt animi eos dolores in excepturi est officia duis aute in dolor illum in eum incididunt est est qui facere elit autem soluta eu nulla in minim mollit voluptas labore minus proident qui iusto velit enim consectetur laborum</p>
+                <div class="col-12">
+                    <div class='d-flex justify-content-evenly mb-5'>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/php-logo.png' class='img-thumbnail' alt='PHP programming language official logo'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">PHP, MySQLi, PDO</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Server Back-End preprocessing for Front-End delivery. Database interaction for user-specific content delivery.</p>
+
+
+                            </div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/logo-mysql.png' class='img-thumbnail' alt='MySQL relational database management system logo'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">MySQL</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Database querying language used alongside PHP to build user-specific content and session control.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/html5-badge-h-solo.png' class='img-thumbnail' alt='HTML5 markup language standard badge'/>
+                                    <img src='bin/media/css.svg' class='img-thumbnail' alt='Cascading Style Sheets styling language logo'/>
+                                    <img src='bin/media/scss_logo.svg' class='img-thumbnail' alt='Syntactically Awesome Style Sheets preprocessor logo'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">HTML5, CSS, SCSS</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Front-End UI development. It creates the structure of the UI. It is also the design element of the responsive and WCAG compliant appearance of the website.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='d-flex justify-content-evenly mb-5'>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/JavaScript-logo.png' class='img-thumbnail' alt='JavaScript programming language official logo'/>
+                                    <img src='bin/media/jquery-ar21.svg' class='img-thumbnail' alt='jQuery JavaScript library logo'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">Javascript, jQuery</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Scripting languages with the purpose of generating an interactive website either by animating the UI or interacting with the Back-End without disrupting the user.</p>
+
+
+                            </div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/laravel-logotype-rgb-red.svg' class='img-thumbnail' alt='Laravel PHP web framework logotype'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">Laravel</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Object-oriented PHP, MVC design patterns, database management, and clean Back-End application logic.</p></div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/WordPress-logotype-wmark-white.png' class='img-thumbnail' alt='WordPress content management system wordmark logo'/>
+
+                                </p>
+                                <h2 class="card-title text-center fs-5">WordPress</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Content Management System with high customization, one design many pages.</p></div>
+                        </div>
+                    </div>
+
+                    <div class='d-flex justify-content-evenly'>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" class="bi bi-info-circle img-thumbnail" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                    </svg>
+                                </p>
+                                <h2 class="card-title text-center fs-5">Informational Websites</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Content-first platforms built for brand storytelling, resource publishing, and media sharing. They are designed entirely around reader engagement rather than online transactions.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" class="bi bi-cart4 img-thumbnail" viewBox="0 0 16 16">
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                                    </svg>
+                                </p>
+                                <h2 class="card-title text-center fs-5">E-Commerce Websites</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Secure, transactional platforms featuring dynamic product catalogs, shopping cart logic, secure user authentication, and robust database management.</p>
+
+
+                            </div>
+                        </div>
+                        <div class="card bg-light" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class='d-flex justify-content-evenly'>
+                                    <img src='bin/media/w3c.png' class='img-thumbnail' alt='World Wide Web Consortium W3C organization logo'/>
+                                </p>
+                                <h2 class="card-title text-center fs-5">WCAG & Section 508 Compliance</h2>
+                                <hr class="border-dark">
+                                <p class="card-text">Implementing rigorous accessibility frameworks to support assistive hardware/software and meet mandatory U.S. legal standards for public and private web resources.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="row  mt-5 mb-5" id='contact_page'>
+            <section class="row  mt-5 mb-5" data-content='contact_page'>
                 <div class='col-12 h1 text-center'>
                     Contact Me
                 </div>
-                <div class='col-xs-12 col-md-4 offset-md-4'>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1mIUgC0dyWXqWaT1uYxxb1LLAzpPB4uRNeW1wWJPXOEep-g/viewform?embedded=true" width="640" height="934" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class='col-xs-12 col-md-4 offset-md-4 cf-wrapper'>
+                    <iframe title='Contact Me Google Form.' src="https://docs.google.com/forms/d/e/1FAIpQLSe1mIUgC0dyWXqWaT1uYxxb1LLAzpPB4uRNeW1wWJPXOEep-g/viewform?embedded=true" scrolling='no' width="640" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </section>
             <section class='row hidden position-fixed bottom-0 end-10' id='back_to_top'>
-                <span class='btn btn-primary btn-lg'>^</span>
-                <script>
-                    const BTP = document.querySelector("#back_to_top span");
-                    BTP.addEventListener("click", function () {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "smooth"
-                        });
-                    });
-                    function detectPageMoved() {
-                        var fromTop = window.scrollY;
-                        var navbar = document.getElementById("main_navbar");
-                        var navbarRect = navbar.getBoundingClientRect();
-                        if (fromTop >= (navbarRect.top + navbar.offsetHeight)) {
-                            document.getElementById("back_to_top").classList.remove("hidden");
-                        } else {
-                            document.getElementById("back_to_top").classList.add("hidden");
-                        }
-                    }
-
-                    document.querySelector("#main_navbar a").addEventListener("click", detectPageMoved);
-                    window.addEventListener("scroll", detectPageMoved);
-                    window.onload = function () {
-                        BTP.style.height = BTP.style.width;
-                    };
-                </script>
+                <button class='btn btn-primary btn-lg' height='75px' width='auto' aria-label="Back to top">^</button>
             </section>
-            <footer class="row  mt-5 mb-5">
-                <div class="col">
-                    <ul class="list-group">
-                        <li class="list-group-item text-center fw-bold">Legal</li>
-                        <li class="list-group-item">&copy; 2026 Louis Milotte</li>
+            <footer class="row  mt-5 bg-white">
+                <div class='col'>
+                    <ul class='list-group'>
+                        <li class='list-group-item text-center fw-bold bg-dark text-primary'>About</li>
+                        <li class='list-group-item'>Full-Stack LAMP Developer & Accessibility Advocate. Building scalable web architectures and inclusive, WCAG-compliant user interfaces.</li>
+                    </ul>
+                </div>
+                <div class='col'>
+                    <ul class='list-group' id='navbar_footer'>
+                        <li class='list-group-item text-center fw-bold bg-dark text-primary'>Navigation</li>
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#" data-page="home_page">Home</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#" data-page="competencies_page">Competencies</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#" data-page="contact_page">Contact Me</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://github.com/LouisMilotte?tab=repositories" class="nav-link" target="_blank">Code Repositories</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col">
                     <ul class="list-group">
-                        <li class="list-group-item text-center fw-bold">Contact</li>
-                        <li class="list-group-item"><a href='https://forms.gle/qrm78xzEMxMK8yhw7' target='__blank'>Contact Form</a></li>
+                        <li class="list-group-item text-center fw-bold bg-dark text-primary">Legal</li>
+                        <li class="list-group-item">&copy; 2026 Louis Milotte, All Rights Reserved</li>
+                        <li class="list-group-item"><img class='img-thumbnail' src='bin/media/wcag2.1AAA-v.png' alt='Web Content Accessibility Guidelines Version 2.1 Triple-A compliant.'/></li>
+                        <li class="list-group-item">Created with <a class='btn btn-primary' href='https://getbootstrap.com/' target='_blank'>GetBootstrap v5<span class="hidden"> (opens in a new tab)</span></a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item text-center fw-bold bg-dark text-primary">Contact</li>
+                        <li class="list-group-item"><a class='btn btn-primary' href='https://forms.gle/qrm78xzEMxMK8yhw7' target='__blank'>Contact Form</a></li>
                     </ul>
                 </div>
             </footer>
         </article>
+
+        <script src='bin/scripts/scripts.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
